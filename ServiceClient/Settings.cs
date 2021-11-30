@@ -1,6 +1,6 @@
 ﻿namespace ServiceClient
 {
-    public class AuthenticationSettings
+    public class Settings
     {
         public string RedisConnectionString { get; set; }
         public string OauthURL { get; set; }

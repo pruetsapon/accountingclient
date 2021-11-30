@@ -13,13 +13,13 @@ namespace ServiceClient.Services
 {
     public class AuthenticationService : IAuthenticationService
     {
-        private readonly IOptions<AuthenticationSettings> _settings;
+        private readonly IOptions<Settings> _settings;
         private readonly HttpClient _httpClient;
         private readonly ILogger<AuthenticationService> _logger;
 
         private readonly string _remoteServiceBaseUrl;
 
-        public AuthenticationService(HttpClient httpClient, ILogger<AuthenticationService> logger, IOptions<AuthenticationSettings> settings)
+        public AuthenticationService(HttpClient httpClient, ILogger<AuthenticationService> logger, IOptions<Settings> settings)
         {
             _httpClient = httpClient;
             _settings = settings;

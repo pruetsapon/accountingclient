@@ -8,7 +8,7 @@
 ## RedisRepository
     -services.AddSingleton<ConnectionMultiplexer>(sp =>
     {
-        var settings = sp.GetRequiredService<IOptions<AuthenticationSettings>>().Value;
+        var settings = sp.GetRequiredService<IOptions<Settings>>().Value;
         var configuration = ConfigurationOptions.Parse(settings.RedisConnectionString, true);
         configuration.ResolveDns = true;
         return ConnectionMultiplexer.Connect(configuration);
